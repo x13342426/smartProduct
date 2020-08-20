@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "printProduct";
+option java_outer_classname = "PrintProductServiceImpl";
+
+package printProduct;
+
+service PrintProductService {
+
+    rpc switchPower(PowerRequest) returns (PowerResponse) {}
+
+    rpc printProducts(PrinterRequest) returns (stream PrinterResponse) {} 
+
+}
+
+message PowerRequest {
+    bool switch = 1;
+}
+
+message PowerResponse {
+    bool switch = 1;
+}
+
+message PrinterRequest {
+    int32 printer = 1;
+}
+
+message PrinterResponse {
+    int32 printer = 1;
+}
