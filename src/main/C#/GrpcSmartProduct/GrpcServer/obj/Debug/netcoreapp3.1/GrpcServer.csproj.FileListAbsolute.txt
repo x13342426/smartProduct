@@ -14,7 +14,6 @@ C:\Users\Bren\source\repos\GrpcSmartProduct\GrpcServer\bin\Debug\netcoreapp3.1\G
 C:\Users\Bren\source\repos\GrpcSmartProduct\GrpcServer\bin\Debug\netcoreapp3.1\Grpc.Net.Client.dll
 C:\Users\Bren\source\repos\GrpcSmartProduct\GrpcServer\bin\Debug\netcoreapp3.1\Grpc.Net.ClientFactory.dll
 C:\Users\Bren\source\repos\GrpcSmartProduct\GrpcServer\bin\Debug\netcoreapp3.1\Grpc.Net.Common.dll
-C:\Users\Bren\source\repos\GrpcSmartProduct\GrpcServer\obj\Debug\netcoreapp3.1\GrpcServer.csprojAssemblyReference.cache
 C:\Users\Bren\source\repos\GrpcSmartProduct\GrpcServer\obj\Debug\netcoreapp3.1\GrpcServer.AssemblyInfoInputs.cache
 C:\Users\Bren\source\repos\GrpcSmartProduct\GrpcServer\obj\Debug\netcoreapp3.1\GrpcServer.AssemblyInfo.cs
 C:\Users\Bren\source\repos\GrpcSmartProduct\GrpcServer\obj\Debug\netcoreapp3.1\GrpcServer.csproj.CoreCompileInputs.cache
@@ -26,3 +25,4 @@ C:\Users\Bren\source\repos\GrpcSmartProduct\GrpcServer\obj\Debug\netcoreapp3.1\s
 C:\Users\Bren\source\repos\GrpcSmartProduct\GrpcServer\obj\Debug\netcoreapp3.1\GrpcServer.dll
 C:\Users\Bren\source\repos\GrpcSmartProduct\GrpcServer\obj\Debug\netcoreapp3.1\GrpcServer.pdb
 C:\Users\Bren\source\repos\GrpcSmartProduct\GrpcServer\obj\Debug\netcoreapp3.1\GrpcServer.genruntimeconfig.cache
+C:\Users\Bren\source\repos\GrpcSmartProduct\GrpcServer\obj\Debug\netcoreapp3.1\GrpcServer.csprojAssemblyReference.cache

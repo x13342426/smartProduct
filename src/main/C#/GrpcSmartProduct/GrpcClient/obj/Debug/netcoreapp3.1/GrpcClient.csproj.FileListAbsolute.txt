@@ -16,3 +16,4 @@ C:\Users\Bren\source\repos\GrpcSmartProduct\GrpcClient\obj\Debug\netcoreapp3.1\G
 C:\Users\Bren\source\repos\GrpcSmartProduct\GrpcClient\obj\Debug\netcoreapp3.1\GrpcClient.dll
 C:\Users\Bren\source\repos\GrpcSmartProduct\GrpcClient\obj\Debug\netcoreapp3.1\GrpcClient.pdb
 C:\Users\Bren\source\repos\GrpcSmartProduct\GrpcClient\obj\Debug\netcoreapp3.1\GrpcClient.genruntimeconfig.cache
+C:\Users\Bren\source\repos\GrpcSmartProduct\GrpcClient\obj\Debug\netcoreapp3.1\GrpcClient.csprojAssemblyReference.cache
