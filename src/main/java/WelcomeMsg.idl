@@ -1,0 +1,5 @@
+module WelcomeMsg {
+    interface Welcomemsg {
+        string welcomeMsg () ;
+    };
+};
