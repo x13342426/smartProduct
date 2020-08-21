@@ -25,19 +25,22 @@ namespace GrpcServer {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChVQcm90b3MvcHJvZHVjdHMucHJvdG8iFAoSUHJvZHVjdExpc3RSZXF1ZXN0",
-            "IicKElByb2R1Y3RMb29rdXBNb2RlbBIRCglwcm9kdWN0SWQYASABKAUiXAoM",
-            "UHJvZHVjdE1vZGVsEhMKC3Byb2R1Y3ROYW1lGAEgASgJEhMKC3Byb2R1Y3RU",
-            "eXBlGAIgASgJEhMKC3Byb2R1Y3REZXNjGAMgASgJEg0KBXByaWNlGAQgASgF",
-            "MncKB1Byb2R1Y3QSNAoOR2V0UHJvZHVjdEluZm8SEy5Qcm9kdWN0TG9va3Vw",
-            "TW9kZWwaDS5Qcm9kdWN0TW9kZWwSNgoOR2V0UHJvZHVjdExpc3QSEy5Qcm9k",
-            "dWN0TGlzdFJlcXVlc3QaDS5Qcm9kdWN0TW9kZWwwAUINqgIKR3JwY1NlcnZl",
-            "cmIGcHJvdG8z"));
+            "IicKElByb2R1Y3RMb29rdXBNb2RlbBIRCglwcm9kdWN0SWQYASABKAUiNAoL",
+            "VXNlcldlbGNvbWUSEAoIVXNlck5hbWUYASABKAkSEwoLVXNlcldlbGNvbWUY",
+            "AiABKAkigwEKDFByb2R1Y3RNb2RlbBITCgtwcm9kdWN0TmFtZRgBIAEoCRIT",
+            "Cgtwcm9kdWN0VHlwZRgCIAEoCRITCgtwcm9kdWN0RGVzYxgDIAEoCRINCgVw",
+            "cmljZRgEIAEoBRIQCghVc2VyTmFtZRgFIAEoCRITCgtVc2VyV2VsY29tZRgG",
+            "IAEoCTJ3CgdQcm9kdWN0EjQKDkdldFVzZXJXZWxjb21lEhMuUHJvZHVjdExv",
+            "b2t1cE1vZGVsGg0uUHJvZHVjdE1vZGVsEjYKDkdldFByb2R1Y3RMaXN0EhMu",
+            "UHJvZHVjdExpc3RSZXF1ZXN0Gg0uUHJvZHVjdE1vZGVsMAFCDaoCCkdycGNT",
+            "ZXJ2ZXJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServer.ProductListRequest), global::GrpcServer.ProductListRequest.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServer.ProductLookupModel), global::GrpcServer.ProductLookupModel.Parser, new[]{ "ProductId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServer.ProductModel), global::GrpcServer.ProductModel.Parser, new[]{ "ProductName", "ProductType", "ProductDesc", "Price" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServer.UserWelcome), global::GrpcServer.UserWelcome.Parser, new[]{ "UserName", "UserWelcome_" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServer.ProductModel), global::GrpcServer.ProductModel.Parser, new[]{ "ProductName", "ProductType", "ProductDesc", "Price", "UserName", "UserWelcome" }, null, null, null, null)
           }));
     }
     #endregion
@@ -274,6 +277,163 @@ namespace GrpcServer {
 
   }
 
+  public sealed partial class UserWelcome : pb::IMessage<UserWelcome> {
+    private static readonly pb::MessageParser<UserWelcome> _parser = new pb::MessageParser<UserWelcome>(() => new UserWelcome());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UserWelcome> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::GrpcServer.ProductsReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UserWelcome() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UserWelcome(UserWelcome other) : this() {
+      userName_ = other.userName_;
+      userWelcome_ = other.userWelcome_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UserWelcome Clone() {
+      return new UserWelcome(this);
+    }
+
+    /// <summary>Field number for the "UserName" field.</summary>
+    public const int UserNameFieldNumber = 1;
+    private string userName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string UserName {
+      get { return userName_; }
+      set {
+        userName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "UserWelcome" field.</summary>
+    public const int UserWelcome_FieldNumber = 2;
+    private string userWelcome_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string UserWelcome_ {
+      get { return userWelcome_; }
+      set {
+        userWelcome_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UserWelcome);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UserWelcome other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (UserName != other.UserName) return false;
+      if (UserWelcome_ != other.UserWelcome_) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (UserName.Length != 0) hash ^= UserName.GetHashCode();
+      if (UserWelcome_.Length != 0) hash ^= UserWelcome_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (UserName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(UserName);
+      }
+      if (UserWelcome_.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(UserWelcome_);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (UserName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserName);
+      }
+      if (UserWelcome_.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserWelcome_);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UserWelcome other) {
+      if (other == null) {
+        return;
+      }
+      if (other.UserName.Length != 0) {
+        UserName = other.UserName;
+      }
+      if (other.UserWelcome_.Length != 0) {
+        UserWelcome_ = other.UserWelcome_;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            UserName = input.ReadString();
+            break;
+          }
+          case 18: {
+            UserWelcome_ = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class ProductModel : pb::IMessage<ProductModel> {
     private static readonly pb::MessageParser<ProductModel> _parser = new pb::MessageParser<ProductModel>(() => new ProductModel());
     private pb::UnknownFieldSet _unknownFields;
@@ -282,7 +442,7 @@ namespace GrpcServer {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcServer.ProductsReflection.Descriptor.MessageTypes[2]; }
+      get { return global::GrpcServer.ProductsReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -303,6 +463,8 @@ namespace GrpcServer {
       productType_ = other.productType_;
       productDesc_ = other.productDesc_;
       price_ = other.price_;
+      userName_ = other.userName_;
+      userWelcome_ = other.userWelcome_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -355,6 +517,28 @@ namespace GrpcServer {
       }
     }
 
+    /// <summary>Field number for the "UserName" field.</summary>
+    public const int UserNameFieldNumber = 5;
+    private string userName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string UserName {
+      get { return userName_; }
+      set {
+        userName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "UserWelcome" field.</summary>
+    public const int UserWelcomeFieldNumber = 6;
+    private string userWelcome_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string UserWelcome {
+      get { return userWelcome_; }
+      set {
+        userWelcome_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as ProductModel);
@@ -372,6 +556,8 @@ namespace GrpcServer {
       if (ProductType != other.ProductType) return false;
       if (ProductDesc != other.ProductDesc) return false;
       if (Price != other.Price) return false;
+      if (UserName != other.UserName) return false;
+      if (UserWelcome != other.UserWelcome) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -382,6 +568,8 @@ namespace GrpcServer {
       if (ProductType.Length != 0) hash ^= ProductType.GetHashCode();
       if (ProductDesc.Length != 0) hash ^= ProductDesc.GetHashCode();
       if (Price != 0) hash ^= Price.GetHashCode();
+      if (UserName.Length != 0) hash ^= UserName.GetHashCode();
+      if (UserWelcome.Length != 0) hash ^= UserWelcome.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -411,6 +599,14 @@ namespace GrpcServer {
         output.WriteRawTag(32);
         output.WriteInt32(Price);
       }
+      if (UserName.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(UserName);
+      }
+      if (UserWelcome.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(UserWelcome);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -430,6 +626,12 @@ namespace GrpcServer {
       }
       if (Price != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Price);
+      }
+      if (UserName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserName);
+      }
+      if (UserWelcome.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserWelcome);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -453,6 +655,12 @@ namespace GrpcServer {
       }
       if (other.Price != 0) {
         Price = other.Price;
+      }
+      if (other.UserName.Length != 0) {
+        UserName = other.UserName;
+      }
+      if (other.UserWelcome.Length != 0) {
+        UserWelcome = other.UserWelcome;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -479,6 +687,14 @@ namespace GrpcServer {
           }
           case 32: {
             Price = input.ReadInt32();
+            break;
+          }
+          case 42: {
+            UserName = input.ReadString();
+            break;
+          }
+          case 50: {
+            UserWelcome = input.ReadString();
             break;
           }
         }

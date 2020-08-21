@@ -16,10 +16,10 @@ namespace GrpcServer {
     static readonly grpc::Marshaller<global::GrpcServer.ProductModel> __Marshaller_ProductModel = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcServer.ProductModel.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcServer.ProductListRequest> __Marshaller_ProductListRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcServer.ProductListRequest.Parser.ParseFrom);
 
-    static readonly grpc::Method<global::GrpcServer.ProductLookupModel, global::GrpcServer.ProductModel> __Method_GetProductInfo = new grpc::Method<global::GrpcServer.ProductLookupModel, global::GrpcServer.ProductModel>(
+    static readonly grpc::Method<global::GrpcServer.ProductLookupModel, global::GrpcServer.ProductModel> __Method_GetUserWelcome = new grpc::Method<global::GrpcServer.ProductLookupModel, global::GrpcServer.ProductModel>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "GetProductInfo",
+        "GetUserWelcome",
         __Marshaller_ProductLookupModel,
         __Marshaller_ProductModel);
 
@@ -59,21 +59,21 @@ namespace GrpcServer {
       {
       }
 
-      public virtual global::GrpcServer.ProductModel GetProductInfo(global::GrpcServer.ProductLookupModel request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::GrpcServer.ProductModel GetUserWelcome(global::GrpcServer.ProductLookupModel request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return GetProductInfo(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return GetUserWelcome(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::GrpcServer.ProductModel GetProductInfo(global::GrpcServer.ProductLookupModel request, grpc::CallOptions options)
+      public virtual global::GrpcServer.ProductModel GetUserWelcome(global::GrpcServer.ProductLookupModel request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_GetProductInfo, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_GetUserWelcome, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::GrpcServer.ProductModel> GetProductInfoAsync(global::GrpcServer.ProductLookupModel request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::GrpcServer.ProductModel> GetUserWelcomeAsync(global::GrpcServer.ProductLookupModel request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return GetProductInfoAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return GetUserWelcomeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::GrpcServer.ProductModel> GetProductInfoAsync(global::GrpcServer.ProductLookupModel request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::GrpcServer.ProductModel> GetUserWelcomeAsync(global::GrpcServer.ProductLookupModel request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_GetProductInfo, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_GetUserWelcome, null, options, request);
       }
       public virtual grpc::AsyncServerStreamingCall<global::GrpcServer.ProductModel> GetProductList(global::GrpcServer.ProductListRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {

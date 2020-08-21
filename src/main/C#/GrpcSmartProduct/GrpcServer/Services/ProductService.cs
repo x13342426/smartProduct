@@ -18,27 +18,24 @@ namespace GrpcServer.Services
         }
 
 
-        public override Task<ProductModel> GetProductInfo(ProductLookupModel request, ServerCallContext context)
+        public override Task<ProductModel> GetUserWelcome(ProductLookupModel request, ServerCallContext context)
         {
             ProductModel output = new ProductModel();
 
             if (request.ProductId == 1)
             {
-                output.ProductName = "Pen";
-                output.ProductType = "Bic Brand";
-                output.ProductDesc = "Blue pen for writing";
+                output.UserName = "Bren";
+                output.UserWelcome = "Welcome";
             }
             else if (request.ProductId == 2)
             {
-                output.ProductName = "Pen";
-                output.ProductType = "Bic Brand";
-                output.ProductDesc = "Blue pen for writing";
+                output.UserName = "Matt";
+                output.UserWelcome = "Welcome";
             }
             else
             {
-                output.ProductName = "Pen";
-                output.ProductType = "Bic Brand";
-                output.ProductDesc = "Blue pen for writing";
+                output.UserName = "John";
+                output.UserWelcome = "Welcome";
 
             }
 

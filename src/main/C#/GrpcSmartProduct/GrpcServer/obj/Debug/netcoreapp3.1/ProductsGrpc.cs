@@ -16,10 +16,10 @@ namespace GrpcServer {
     static readonly grpc::Marshaller<global::GrpcServer.ProductModel> __Marshaller_ProductModel = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcServer.ProductModel.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::GrpcServer.ProductListRequest> __Marshaller_ProductListRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::GrpcServer.ProductListRequest.Parser.ParseFrom);
 
-    static readonly grpc::Method<global::GrpcServer.ProductLookupModel, global::GrpcServer.ProductModel> __Method_GetProductInfo = new grpc::Method<global::GrpcServer.ProductLookupModel, global::GrpcServer.ProductModel>(
+    static readonly grpc::Method<global::GrpcServer.ProductLookupModel, global::GrpcServer.ProductModel> __Method_GetUserWelcome = new grpc::Method<global::GrpcServer.ProductLookupModel, global::GrpcServer.ProductModel>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "GetProductInfo",
+        "GetUserWelcome",
         __Marshaller_ProductLookupModel,
         __Marshaller_ProductModel);
 
@@ -40,7 +40,7 @@ namespace GrpcServer {
     [grpc::BindServiceMethod(typeof(Product), "BindService")]
     public abstract partial class ProductBase
     {
-      public virtual global::System.Threading.Tasks.Task<global::GrpcServer.ProductModel> GetProductInfo(global::GrpcServer.ProductLookupModel request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::GrpcServer.ProductModel> GetUserWelcome(global::GrpcServer.ProductLookupModel request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -57,7 +57,7 @@ namespace GrpcServer {
     public static grpc::ServerServiceDefinition BindService(ProductBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_GetProductInfo, serviceImpl.GetProductInfo)
+          .AddMethod(__Method_GetUserWelcome, serviceImpl.GetUserWelcome)
           .AddMethod(__Method_GetProductList, serviceImpl.GetProductList).Build();
     }
 
@@ -67,7 +67,7 @@ namespace GrpcServer {
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ProductBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_GetProductInfo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcServer.ProductLookupModel, global::GrpcServer.ProductModel>(serviceImpl.GetProductInfo));
+      serviceBinder.AddMethod(__Method_GetUserWelcome, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcServer.ProductLookupModel, global::GrpcServer.ProductModel>(serviceImpl.GetUserWelcome));
       serviceBinder.AddMethod(__Method_GetProductList, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::GrpcServer.ProductListRequest, global::GrpcServer.ProductModel>(serviceImpl.GetProductList));
     }
 

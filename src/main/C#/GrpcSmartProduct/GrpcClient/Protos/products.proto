@@ -3,7 +3,7 @@ syntax = "proto3";
 option csharp_namespace = "GrpcServer";
 
 service Product {
-	rpc GetProductInfo (ProductLookupModel) returns (ProductModel);
+	rpc GetUserWelcome (ProductLookupModel) returns ( ProductModel);
 	rpc GetProductList (ProductListRequest) returns ( stream ProductModel);
 
 }
@@ -15,6 +15,11 @@ message ProductListRequest{
 message ProductLookupModel{
 	int32 productId = 1;
 }
+
+message UserWelcome{
+	string UserName = 1;
+	string UserWelcome = 2;
+} 
  
 
 message ProductModel {
@@ -22,4 +27,6 @@ message ProductModel {
 	string productType = 2;
 	string productDesc = 3;
 	int32 price = 4;
+	string UserName = 5;
+	string UserWelcome = 6;
 }
