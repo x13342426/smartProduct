@@ -21,7 +21,7 @@ public class ProductServer extends ProductServiceImplBase {
 	public static void main(String[] args) throws IOException, InterruptedException {
 		ProductServer productServer = new ProductServer();
 
-		int port = 50051;
+		int port = 9090;
 		Server server;
 		server = ServerBuilder.forPort(port).addService(productServer).build().start();
 

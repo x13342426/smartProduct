@@ -14,7 +14,7 @@ public class printProductServer extends PrintProductServiceImplBase{
 	public static void main(String[] args) throws IOException, InterruptedException {
 		printProductServer printProductserver = new printProductServer();
 	   
-	    int port = 9090;
+	    int port = 9091;
 	    Server server = ServerBuilder.forPort(port)
 	        .addService(printProductserver)
 	        .build()

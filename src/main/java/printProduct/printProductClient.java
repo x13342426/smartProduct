@@ -67,7 +67,7 @@ public class printProductClient {
 		
 		
 		
-		ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9090).usePlaintext().build();
+		ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9091).usePlaintext().build();
 
 		blockingStub = PrintProductServiceGrpc.newBlockingStub(channel);
 		asyncStub = PrintProductServiceGrpc.newStub(channel);
