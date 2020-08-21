@@ -25,7 +25,7 @@ public class ExampleServiceRegistration {
             
             
             
-            ServiceInfo serviceInfo1 = ServiceInfo.create("_http._tcp.local.", "print_product_service", 9091, "test_Service_text");
+            ServiceInfo serviceInfo1 = ServiceInfo.create("_grpc._tcp.local.", "print_product_service", 9091, "test_Service_text");
             jmdns.registerService(serviceInfo1);
             
             

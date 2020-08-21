@@ -54,7 +54,7 @@ public class ProductClient {
                     String serviceName = info.getName();
                     System.out.println("Grpc Service Resolved");
                     System.out.println(info);
-                    if(!serviceName.equalsIgnoreCase("product_print_service"))
+                    if(!serviceName.equalsIgnoreCase("product_service"))
                     	return;
 		}
 	}

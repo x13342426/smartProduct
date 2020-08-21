@@ -30,12 +30,12 @@ public class printProductClient {
 
 		@Override
 		public void serviceResolved(ServiceEvent event) {
-                    ServiceInfo info = event.getInfo();
-                    int port = info.getPort();
-                    String serviceName = info.getName();
+                    ServiceInfo info1 = event.getInfo();
+                    int port = info1.getPort();
+                    String serviceName = info1.getName();
                     System.out.println("Grpc Service Resolved");
-                    System.out.println(info);
-                    if(!serviceName.equalsIgnoreCase("printer_service"))
+                    System.out.println(info1);
+                    if(!serviceName.equalsIgnoreCase("print_product_service"))
                     	return;
 		}
 	}
